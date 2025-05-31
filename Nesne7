@@ -1,0 +1,27 @@
+public class JavaApplication6 {
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("Recursive ile 2^" + n + " = " + ust(n));
+        System.out.println("Iteratif ile 2^" + n + " = " + ust(n, true));
+    }
+    public static int ust(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Üs negatif olamaz");
+        }
+        if (n == 0) {
+            return 1;
+        }
+        return 2 * ust(n - 1);
+    }
+    public static int ust(int n, boolean iteratif) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Üs negatif olamaz");
+        }
+        
+        int sonuc = 1;
+        for (int i = 0; i < n; i++) {
+            sonuc *= 2;
+        }
+        return sonuc;
+    }
+}
