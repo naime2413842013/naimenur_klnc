@@ -1,0 +1,15 @@
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        int sayi = 5;
+        System.out.println(sayi + "'a kadar olan sayılar:");
+        sayilariYazdir(sayi);
+    }
+    public static void sayilariYazdir(int n) {
+        if (n == 0) { 
+            return;
+        }
+        sayilariYazdir(n - 1);
+        System.out.print(n + " "); 
+    }
+}
