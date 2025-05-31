@@ -1,0 +1,21 @@
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int sayi = 10; 
+        int toplam = tekSayilarinToplami(sayi);
+        System.out.println(sayi + "'a kadar olan tek sayıların toplamı: " + toplam);
+    }
+    public static int tekSayilarinToplami(int n) {
+        if (n <= 0) {
+            return 0;
+        }
+        if (n % 2 != 0) { 
+            return n + tekSayilarinToplami(n - 1);
+        } else { 
+            return tekSayilarinToplami(n - 1);
+        }
+    }
+}
