@@ -1,0 +1,13 @@
+public class JavaApplication5 {
+    public static void main(String[] args) {
+        int sayi = 9875; 
+        int toplam = basamakToplami(sayi);
+        System.out.println(sayi + " sayısının basamakları toplamı: " + toplam);
+    }
+    public static int basamakToplami(int n) {
+        if (n < 10) {
+            return n;
+        }
+        return (n % 10) + basamakToplami(n / 10);
+    }
+}
