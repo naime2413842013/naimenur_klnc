@@ -1,0 +1,20 @@
+ public class JavaApplication7 {
+    public static void main(String[] args) {
+        System.out.println("Dönem notu (70, 80): " + donemNotu(70, 80));
+        System.out.println("Dönem notu (70, 80, 90): " + donemNotu(70, 80, 90));
+    }
+    
+    public static double donemNotu(double vize, double finalNot) {
+        if (vize < 0 || vize > 100 || finalNot < 0 || finalNot > 100) {
+            throw new IllegalArgumentException("Notlar 0-100 aralığında olmalıdır");
+        }
+        return vize * 0.4 + finalNot * 0.6;
+    }
+    
+    public static double donemNotu(double vize, double finalNot, double devam) {
+        if (vize < 0 || vize > 100 || finalNot < 0 || finalNot > 100 || devam < 0 || devam > 100) {
+            throw new IllegalArgumentException("Notlar 0-100 aralığında olmalıdır");
+        }
+        return vize * 0.3 + finalNot * 0.5 + devam * 0.2;
+    }
+}
