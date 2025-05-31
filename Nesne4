@@ -1,0 +1,16 @@
+public class JavaApplication3 {
+    public static void main(String[] args) {
+        int taban = 2;
+        int us = 5;
+        int sonuc = ust(taban, us);
+        System.out.println(taban + "^" + us + " = " + sonuc);
+    }
+
+   
+    public static int ust(int taban, int us) {
+        if (us == 0) { 
+            return 1;
+        }
+        return taban * ust(taban, us - 1); 
+    }
+}
