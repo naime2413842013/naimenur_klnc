@@ -1,0 +1,26 @@
+public class JavaApplication8 {
+    public static double ortalama(double sayi1, double sayi2) {
+        return (sayi1 + sayi2) / 2;
+    }
+    public static double ortalama(double sayi1, double sayi2, double sayi3) {
+        return (sayi1 + sayi2 + sayi3) / 3;
+    }
+    public static double ortalama(double[] sayilar) {
+        if (sayilar.length == 0) {
+            throw new IllegalArgumentException("Dizi boş olamaz");
+        }
+        double toplam = 0;
+        for (double sayi : sayilar) {
+            toplam += sayi;
+        }
+        return toplam / sayilar.length;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("2 sayı ortalaması: " + ortalama(10, 20));
+        System.out.println("3 sayı ortalaması: " + ortalama(10, 20, 30));
+        
+        double[] dizi = {10, 20, 30, 40};
+        System.out.println("Dizi ortalaması: " + ortalama(dizi));
+    }
+}
